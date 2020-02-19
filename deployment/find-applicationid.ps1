@@ -14,7 +14,7 @@
     .PARAMETER appServicePrincipalId
     The application id of the app. This id can be retreived via your ARM template. Ex: "[reference(concat(resourceId('Microsoft.Web/sites', variables('webAppName')), '/providers/Microsoft.ManagedIdentity/Identities/default'), '2018-11-30').principalId]"
     .PARAMETER outputVariableName
-        The prefix for the appid output variable that is injected in the devops pipeline. Defaults to devops_appId
+    The variable name that is injected in the devops pipeline. Defaults to appId
 #>
 param (
     [Parameter(Mandatory=$true)][string]$tenantId,
